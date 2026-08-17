@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paarth Singh Rathore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAF8F3;
+    --ink: #1C1C1E;
+    --ink-soft: #4A4A4A;
+    --line: #DEDAD0;
+    --accent: #1D3557;
+    --accent-soft: #8B6F3E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  header h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.01em;
+  }
+  .role {
+    margin-top: 8px;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .contact-line {
+    margin-top: 18px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .contact-line span {
+    margin-right: 18px;
+  }
+
+  /* Nav */
+  nav {
+    margin-top: 26px;
+    font-size: 0.88rem;
+  }
+  nav a {
+    color: var(--ink-soft);
+    margin-right: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+
+  /* Sections */
+  section {
+    padding: 44px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 20px;
+  }
+  section:last-of-type {
+    border-bottom: none;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-soft);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+  }
+
+  .entry {
+    margin-bottom: 24px;
+  }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+  .entry-title {
+    font-weight: 600;
+    font-size: 1.02rem;
+  }
+  .entry-org {
+    color: var(--ink-soft);
+    font-size: 0.96rem;
+  }
+  .entry-date {
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .entry ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+  }
+  .entry ul li {
+    margin-bottom: 4px;
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+  }
+  .entry p.desc {
+    margin: 6px 0 0;
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+  }
+
+  /* Publications */
+  .pub {
+    margin-bottom: 18px;
+    padding-left: 18px;
+    border-left: 2px solid var(--line);
+  }
+  .pub:last-child { margin-bottom: 0; }
+  .pub-title {
+    font-weight: 600;
+    font-size: 0.98rem;
+  }
+  .pub-meta {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 3px;
+  }
+  .pub-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 8px;
+    background: #EFEAE0;
+    color: var(--accent-soft);
+  }
+
+  /* Grid layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  /* Certifications & Skills */
+  .chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chip {
+    border: 1px solid var(--line);
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: #fff;
+  }
+  .chip strong { font-weight: 600; }
+
+  .cert-list .entry-head { margin-bottom: 2px; }
+
+  .skills-block {
+    margin-bottom: 18px;
+  }
+  .skills-block:last-child { margin-bottom: 0; }
+  .skills-block h3 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 36px 0 60px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 48px 0 32px; }
+    header h1 { font-size: 1.9rem; }
+    .grid-2 { grid-template-columns: 1fr; }
+    nav a { margin-right: 12px; display: inline-block; margin-bottom: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Paarth Singh Rathore</h1>
+    <div class="role">Senior AI Engineer, CTO's Office, Tech Mahindra — researching federated learning, LLMs, and narrative bias in AI systems</div>
+    <div class="contact-line">
+      <span>paarthsinghrathore1@gmail.com</span>
+      <span>+91 7397235288</span>
+      <span><a href="https://linkedin.com/in/paarth-s-rathore" target="_blank">linkedin.com/in/paarth-s-rathore</a></span>
+    </div>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#academic">Academic Positions</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </div>
+</header>
+
+<section id="research">
+  <div class="wrap">
+    <div class="eyebrow">Publications &amp; Research</div>
+    <h2>Research Work</h2>
+
+    <div class="pub">
+      <div class="pub-title">A Two-Stage Machine Learning Approach for Quantitative Gear Crack Detection Using Vibration Signal Analysis</div>
+      <div class="pub-meta"><span class="pub-tag">Published</span>P. S. Rathore, A. Keprate, L. R. Lakshmi, O. D. Mohammed, D. Ghose — Proceedings of the PHM Society European Conference (PHME26), 9(1), 1–10, 2026. DOI: <a href="https://doi.org/10.36001/phme.2026.v9i1.5008" target="_blank">10.36001/phme.2026.v9i1.5008</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Byzantine-Robust Federated Learning for Bearing Crack Diagnosis in Distributed Rotating Machinery</div>
+      <div class="pub-meta"><span class="pub-tag">Under Review</span>A. Keprate, P. S. Rathore, et al. — Array (Elsevier), manuscript ARRAY-D-26-01809</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Client Architecture Robustness in Federated Bearing Fault Diagnosis Depends on the Severity of Data Heterogeneity</div>
+      <div class="pub-meta"><span class="pub-tag">Submitted</span>P. S. Rathore et al. — submitted to ICCIT 2026, Bangladesh</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">A Modified FedPer-Based Personalization Approach for Federated Fault Diagnosis</div>
+      <div class="pub-meta"><span class="pub-tag">In Preparation</span>P. S. Rathore et al. — core personalization method developed during the M.E. dissertation, under continued remote guidance from Prof. Debasish Ghose</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Which India Survives Translation? Narrative Homogenisation Across Indian Oral Traditions in LLMs</div>
+      <div class="pub-meta"><span class="pub-tag">Preprint</span>P. S. Rathore — SSRN. DOI: <a href="https://doi.org/10.2139/ssrn.7133858" target="_blank">10.2139/ssrn.7133858</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">How AI Stereotypes the World: Regional Narrative Templates in LLM-Generated Stories</div>
+      <div class="pub-meta"><span class="pub-tag">Preprint</span>P. S. Rathore — SSRN. DOI: <a href="https://doi.org/10.2139/ssrn.7133898" target="_blank">10.2139/ssrn.7133898</a></div>
+    </div>
+
+    <div class="pub" style="border-left-color: var(--accent-soft);">
+      <div class="pub-title">M.E. Dissertation — Robust and Personalized Federated Learning for Rotating Machinery Fault Diagnosis</div>
+      <div class="pub-meta">Supervised by Prof. Debasish Ghose (Kristiania University of Applied Sciences), Prof. Arvind Keprate (OsloMet), and Prof. L. Rajya Lakshmi (BITS Pilani). Comparative study of FedAvg-based architectures, a Byzantine-robust aggregation method (OpFedAvg), and a personalization strategy (LG-FedAvg) under non-IID conditions, using two public vibration-signal datasets with simulated distributed nodes (Flower framework).</div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow">Academics</div>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Master of Engineering, Computer Science</div>
+        <div class="entry-date">2024 – 2026</div>
+      </div>
+      <div class="entry-org">Birla Institute of Technology and Science, Pilani &middot; CGPA 7.80</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Exchange Semester</div>
+        <div class="entry-date">Spring 2026</div>
+      </div>
+      <div class="entry-org">Kristiania University of Applied Sciences, Bergen, Norway</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Bachelor of Technology, Computer Science Engineering</div>
+        <div class="entry-date">2017 – 2021</div>
+      </div>
+      <div class="entry-org">SRM Institute of Science and Technology, Kattankulathur &middot; 80.57%</div>
+    </div>
+  </div>
+</section>
+
+<section id="academic">
+  <div class="wrap">
+    <div class="eyebrow">Academic Rigour</div>
+    <h2>Academic Positions</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Teaching Assistant</div>
+        <div class="entry-date">Aug 2024 – Dec 2025</div>
+      </div>
+      <div class="entry-org">BITS Pilani</div>
+      <ul>
+        <li>CS F301: Principles of Programming Languages (Sem 1)</li>
+        <li>SS G515: Data Warehousing (Sem 2)</li>
+        <li>CS F351: Theory of Computation (Sem 3)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">Work</div>
+    <h2>Professional Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Senior AI Engineer, CTO's Office</div>
+        <div class="entry-date">Jul 2026 – Present</div>
+      </div>
+      <div class="entry-org">Tech Mahindra</div>
+      <ul>
+        <li>Building AI agents and an AI-agent-based correlation engine to perform root-cause analysis (RCA) on IT infrastructure health</li>
+        <li>Pursuing a Microsoft Azure certification track spanning AI, data, and security</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">TechnoRise Intern</div>
+        <div class="entry-date">May 2025 – Jul 2025</div>
+      </div>
+      <div class="entry-org">Tech Mahindra</div>
+      <ul>
+        <li>Built a live dashboard for a fraud detection system using Python and data visualization libraries</li>
+        <li>Performed data cleaning and preprocessing on datasets for machine learning model training</li>
+        <li>Received Full-Time Employment (FTE) offer based on internship performance</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Business Technology Solutions Associate</div>
+        <div class="entry-date">Sep 2021 – Nov 2022</div>
+      </div>
+      <div class="entry-org">ZS Associates</div>
+      <ul>
+        <li>Implemented sales crediting process for a US pharmaceutical company on AWS using SQL</li>
+        <li>Developed system with ZS ETL tool to generate monthly performance reports for pharma client</li>
+        <li>Retrospectively analyzed growth forecasting methods, identified inaccurate methods and narrowed list by 90%</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Software Consultant</div>
+        <div class="entry-date">Jul 2021 – Aug 2021</div>
+      </div>
+      <div class="entry-org">Bridge Solutions Group</div>
+      <ul>
+        <li>Promoted to Software Consultant based on internship performance</li>
+        <li>Developed and tested webhooks &amp; rules for the Fluent OMS platform using Java &amp; GraphQL</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Software Consultant Intern</div>
+        <div class="entry-date">Jan 2021 – Jun 2021</div>
+      </div>
+      <div class="entry-org">Bridge Solutions Group</div>
+      <ul>
+        <li>Contributed to live projects by performing Root Cause Analysis and resolving tickets</li>
+        <li>Developed and tested webhooks &amp; rules for the Fluent OMS platform using Java &amp; GraphQL</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="eyebrow">Credentials</div>
+    <h2>Test Scores &amp; Certifications</h2>
+
+    <div class="entry cert-list">
+      <div class="entry-head">
+        <div class="entry-title">GATE Computer Science 2024</div>
+        <div class="entry-date">99th Percentile</div>
+      </div>
+    </div>
+    <div class="entry cert-list">
+      <div class="entry-head">
+        <div class="entry-title">GATE Data Science &amp; AI 2024</div>
+        <div class="entry-date">90th Percentile</div>
+      </div>
+    </div>
+    <div class="entry cert-list">
+      <div class="entry-head">
+        <div class="entry-title">ISRO Scientist C Exam</div>
+        <div class="entry-date">Cleared</div>
+      </div>
+    </div>
+    <div class="entry cert-list">
+      <div class="entry-head">
+        <div class="entry-title">IELTS Academic</div>
+        <div class="entry-date">Overall Band 8 (no individual band below 6.5)</div>
+      </div>
+    </div>
+    <div class="entry cert-list">
+      <div class="entry-head">
+        <div class="entry-title">Microsoft Azure Certification Track</div>
+        <div class="entry-date">In Progress</div>
+      </div>
+      <div class="entry-org">AI-200, AI-103, DP-700, SC-500</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Toolkit</div>
+    <h2>Technical Skills</h2>
+
+    <div class="skills-block">
+      <h3>Programming Languages</h3>
+      <div class="chip-list">
+        <div class="chip">Python</div>
+        <div class="chip">C++</div>
+        <div class="chip">SQL</div>
+        <div class="chip">JavaScript</div>
+        <div class="chip">C</div>
+      </div>
+    </div>
+
+    <div class="skills-block">
+      <h3>Frameworks &amp; Tools</h3>
+      <div class="chip-list">
+        <div class="chip">Pandas</div>
+        <div class="chip">Node.js</div>
+        <div class="chip">Azure</div>
+      </div>
+    </div>
+
+    <div class="skills-block">
+      <h3>Subjects</h3>
+      <div class="chip-list">
+        <div class="chip">Federated Learning</div>
+        <div class="chip">LLMs</div>
+        <div class="chip">Data Structures &amp; Algorithms</div>
+        <div class="chip">Operating Systems</div>
+        <div class="chip">Computer Networks</div>
+        <div class="chip">Computer Organization &amp; Architecture</div>
+        <div class="chip">Database Management Systems</div>
+        <div class="chip">Artificial Intelligence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Paarth Singh Rathore &middot; Updated 2026
+  </div>
+</footer>
+
+</body>
+</html>
