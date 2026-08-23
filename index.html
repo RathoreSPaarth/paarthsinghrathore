@@ -58,6 +58,14 @@
     font-size: 1.05rem;
     color: var(--ink-soft);
   }
+  .statement {
+    margin: 14px 0 0;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    max-width: 620px;
+    line-height: 1.65;
+  }
+
   .contact-line {
     margin-top: 18px;
     font-size: 0.92rem;
@@ -145,6 +153,32 @@
   }
 
   /* Publications */
+  .research-thread {
+    margin-bottom: 36px;
+  }
+  .research-thread:last-child { margin-bottom: 0; }
+  .thread-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .thread-desc {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .diss-callout {
+    background: #F2EEE3;
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+  }
+  .diss-callout .pub-title { font-size: 1.05rem; }
+  .diss-callout .eyebrow { margin-bottom: 8px; }
+
   .pub {
     margin-bottom: 18px;
     padding-left: 18px;
@@ -221,6 +255,7 @@
     header h1 { font-size: 1.9rem; }
     .grid-2 { grid-template-columns: 1fr; }
     nav a { margin-right: 12px; display: inline-block; margin-bottom: 8px; }
+    .contact-line span { display: inline-block; margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -230,10 +265,15 @@
   <div class="wrap">
     <h1>Paarth Singh Rathore</h1>
     <div class="role">Senior AI Engineer, CTO's Office, Tech Mahindra — researching federated learning, LLMs, and narrative bias in AI systems</div>
+    <p class="statement">I work on how learned systems represent and propagate information reliably — spanning robust, personalized federated learning for industrial diagnostics, and how large language models encode and homogenize cultural narratives.</p>
     <div class="contact-line">
       <span>paarthsinghrathore1@gmail.com</span>
       <span>+91 7397235288</span>
-      <span><a href="https://linkedin.com/in/paarth-s-rathore" target="_blank">linkedin.com/in/paarth-s-rathore</a></span>
+      <span><a href="https://linkedin.com/in/paarth-s-rathore" target="_blank">LinkedIn</a></span>
+      <span><a href="https://github.com/RathoreSPaarth" target="_blank">GitHub</a></span>
+      <span><a href="https://scholar.google.com/citations?user=ugSG4m4AAAAJ&hl=en" target="_blank">Google Scholar</a></span>
+      <span><a href="https://orcid.org/0009-0002-1814-3838" target="_blank">ORCID</a></span>
+      <span><a href="https://leetcode.com/u/s_rathore/" target="_blank">LeetCode</a></span>
     </div>
     <nav>
       <a href="#research">Research</a>
@@ -251,39 +291,50 @@
     <div class="eyebrow">Publications &amp; Research</div>
     <h2>Research Work</h2>
 
-    <div class="pub">
-      <div class="pub-title">A Two-Stage Machine Learning Approach for Quantitative Gear Crack Detection Using Vibration Signal Analysis</div>
-      <div class="pub-meta"><span class="pub-tag">Published</span>P. S. Rathore, A. Keprate, L. R. Lakshmi, O. D. Mohammed, D. Ghose — Proceedings of the PHM Society European Conference (PHME26), 9(1), 1–10, 2026. DOI: <a href="https://doi.org/10.36001/phme.2026.v9i1.5008" target="_blank">10.36001/phme.2026.v9i1.5008</a></div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">Byzantine-Robust Federated Learning for Bearing Crack Diagnosis in Distributed Rotating Machinery</div>
-      <div class="pub-meta"><span class="pub-tag">Under Review</span>A. Keprate, P. S. Rathore, et al. — Array (Elsevier), manuscript ARRAY-D-26-01809</div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">Client Architecture Robustness in Federated Bearing Fault Diagnosis Depends on the Severity of Data Heterogeneity</div>
-      <div class="pub-meta"><span class="pub-tag">Submitted</span>P. S. Rathore et al. — submitted to ICCIT 2026, Bangladesh</div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">A Modified FedPer-Based Personalization Approach for Federated Fault Diagnosis</div>
-      <div class="pub-meta"><span class="pub-tag">In Preparation</span>P. S. Rathore et al. — core personalization method developed during the M.E. dissertation, under continued remote guidance from Prof. Debasish Ghose</div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">Which India Survives Translation? Narrative Homogenisation Across Indian Oral Traditions in LLMs</div>
-      <div class="pub-meta"><span class="pub-tag">Preprint</span>P. S. Rathore — SSRN. DOI: <a href="https://doi.org/10.2139/ssrn.7133858" target="_blank">10.2139/ssrn.7133858</a></div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">How AI Stereotypes the World: Regional Narrative Templates in LLM-Generated Stories</div>
-      <div class="pub-meta"><span class="pub-tag">Preprint</span>P. S. Rathore — SSRN. DOI: <a href="https://doi.org/10.2139/ssrn.7133898" target="_blank">10.2139/ssrn.7133898</a></div>
-    </div>
-
-    <div class="pub" style="border-left-color: var(--accent-soft);">
-      <div class="pub-title">M.E. Dissertation — Robust and Personalized Federated Learning for Rotating Machinery Fault Diagnosis</div>
+    <div class="diss-callout">
+      <div class="eyebrow">M.E. Dissertation</div>
+      <div class="pub-title">Robust and Personalized Federated Learning for Rotating Machinery Fault Diagnosis</div>
       <div class="pub-meta">Supervised by Prof. Debasish Ghose (Kristiania University of Applied Sciences), Prof. Arvind Keprate (OsloMet), and Prof. L. Rajya Lakshmi (BITS Pilani). Comparative study of FedAvg-based architectures, a Byzantine-robust aggregation method (OpFedAvg), and a personalization strategy (LG-FedAvg) under non-IID conditions, using two public vibration-signal datasets with simulated distributed nodes (Flower framework).</div>
+    </div>
+
+    <div class="research-thread">
+      <div class="thread-label">Thread 1 — Federated Learning &amp; Industrial Diagnostics</div>
+      <div class="thread-desc">Robustness and personalization in federated learning, applied to fault diagnosis in rotating machinery.</div>
+
+      <div class="pub">
+        <div class="pub-title">A Two-Stage Machine Learning Approach for Quantitative Gear Crack Detection Using Vibration Signal Analysis</div>
+        <div class="pub-meta"><span class="pub-tag">Published</span>P. S. Rathore, A. Keprate, L. R. Lakshmi, O. D. Mohammed, D. Ghose — Proceedings of the PHM Society European Conference (PHME26), 9(1), 1–10, 2026. DOI: <a href="https://doi.org/10.36001/phme.2026.v9i1.5008" target="_blank">10.36001/phme.2026.v9i1.5008</a></div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Byzantine-Robust Federated Learning for Bearing Crack Diagnosis in Distributed Rotating Machinery</div>
+        <div class="pub-meta"><span class="pub-tag">Under Review</span>A. Keprate, P. S. Rathore, et al. — Array (Elsevier), manuscript ARRAY-D-26-01809</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Client Architecture Robustness in Federated Bearing Fault Diagnosis Depends on the Severity of Data Heterogeneity</div>
+        <div class="pub-meta"><span class="pub-tag">Submitted</span>P. S. Rathore et al. — submitted to ICCIT 2026, Bangladesh</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">A Modified FedPer-Based Personalization Approach for Federated Fault Diagnosis</div>
+        <div class="pub-meta"><span class="pub-tag">In Preparation</span>P. S. Rathore et al. — core personalization method developed during the M.E. dissertation, under continued remote guidance from Prof. Debasish Ghose</div>
+      </div>
+    </div>
+
+    <div class="research-thread">
+      <div class="thread-label">Thread 2 — Narrative Bias &amp; Cultural Homogenisation in LLMs</div>
+      <div class="thread-desc">How large language models represent, flatten, and stereotype cultural and regional narratives.</div>
+
+      <div class="pub">
+        <div class="pub-title">Which India Survives Translation? Narrative Homogenisation Across Indian Oral Traditions in LLMs</div>
+        <div class="pub-meta"><span class="pub-tag">Preprint</span>P. S. Rathore — SSRN. DOI: <a href="https://doi.org/10.2139/ssrn.7133858" target="_blank">10.2139/ssrn.7133858</a></div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">How AI Stereotypes the World: Regional Narrative Templates in LLM-Generated Stories</div>
+        <div class="pub-meta"><span class="pub-tag">Preprint</span>P. S. Rathore — SSRN. DOI: <a href="https://doi.org/10.2139/ssrn.7133898" target="_blank">10.2139/ssrn.7133898</a></div>
+      </div>
     </div>
   </div>
 </section>
