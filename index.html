@@ -66,8 +66,35 @@
     line-height: 1.65;
   }
 
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .header-text { flex: 1; }
+  .avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #EFEAE0;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-line {
+    margin-top: 18px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
   .link-row {
-    margin-top: 22px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -263,6 +290,8 @@
     header h1 { font-size: 1.9rem; }
     nav a { margin-right: 12px; display: inline-block; margin-bottom: 8px; }
     .timeline-row { grid-template-columns: 1fr; gap: 4px; }
+    .header-top { flex-direction: column-reverse; gap: 16px; }
+    .avatar-placeholder { width: 88px; height: 88px; }
   }
 </style>
 </head>
@@ -270,11 +299,16 @@
 
 <header>
   <div class="wrap">
-    <h1>Paarth Singh Rathore</h1>
-    <div class="role">Senior AI Engineer, CTO's Office, Tech Mahindra — researching federated learning, LLMs, and narrative bias in AI systems</div>
-    <p class="statement">I work on how learned systems represent and propagate information reliably — spanning robust, personalized federated learning for industrial diagnostics, and how large language models encode and homogenize cultural narratives.</p>
+    <div class="header-top">
+      <div class="header-text">
+        <h1>Paarth Singh Rathore</h1>
+        <div class="role">Senior AI Engineer, CTO's Office, Tech Mahindra — researching federated learning, LLMs, and narrative bias in AI systems</div>
+        <p class="statement">I work on how learned systems represent and propagate information reliably — spanning robust, personalized federated learning for industrial diagnostics, and how large language models encode and homogenize cultural narratives.</p>
+      </div>
+      <div class="avatar-placeholder">Photo</div>
+    </div>
+    <div class="contact-line">paarthsinghrathore1@gmail.com &middot; +91 7397235288</div>
     <div class="link-row">
-      <a class="link-pill" href="mailto:paarthsinghrathore1@gmail.com">Email</a>
       <a class="link-pill" href="https://linkedin.com/in/paarth-s-rathore" target="_blank">LinkedIn</a>
       <a class="link-pill" href="https://github.com/RathoreSPaarth" target="_blank">GitHub</a>
       <a class="link-pill" href="https://scholar.google.com/citations?user=ugSG4m4AAAAJ&hl=en" target="_blank">Google Scholar</a>
@@ -493,10 +527,17 @@
     </div>
     <div class="entry cert-list">
       <div class="entry-head">
-        <div class="entry-title">Microsoft Azure Certification Track</div>
-        <div class="entry-date">In Progress</div>
+        <div class="entry-title">Microsoft Certified: AI-103</div>
+        <div class="entry-date">Verified</div>
       </div>
-      <div class="entry-org">AI-200, AI-103, DP-700, SC-500</div>
+      <div class="entry-org">Part of the Azure certification track (AI, data, and security) &middot; <a href="https://learn.microsoft.com/api/credentials/share/en-us/PaarthSinghRathore-0046/D0E5C5ECA8D96473?sharingId=39111E818F845471" target="_blank">view credential</a> &middot; AI-200, DP-700, SC-500 in progress</div>
+    </div>
+    <div class="entry cert-list">
+      <div class="entry-head">
+        <div class="entry-title">Machine Learning Specialization</div>
+        <div class="entry-date">Coursera</div>
+      </div>
+      <div class="entry-org"><a href="https://coursera.org/share/9a4a60c8d239c03443f0ba390f5c1d50" target="_blank">view certificate</a></div>
     </div>
   </div>
 </section>
