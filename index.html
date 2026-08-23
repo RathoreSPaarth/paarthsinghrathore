@@ -73,17 +73,12 @@
     gap: 32px;
   }
   .header-text { flex: 1; }
-  .avatar-placeholder {
+  .avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: #EFEAE0;
     border: 1px solid var(--line);
-    color: var(--ink-soft);
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
     flex-shrink: 0;
   }
 
@@ -291,7 +286,7 @@
     nav a { margin-right: 12px; display: inline-block; margin-bottom: 8px; }
     .timeline-row { grid-template-columns: 1fr; gap: 4px; }
     .header-top { flex-direction: column-reverse; gap: 16px; }
-    .avatar-placeholder { width: 88px; height: 88px; }
+    .avatar { width: 88px; height: 88px; }
   }
 </style>
 </head>
@@ -305,7 +300,7 @@
         <div class="role">Senior AI Engineer, CTO's Office, Tech Mahindra — researching federated learning, LLMs, and narrative bias in AI systems</div>
         <p class="statement">I work on how learned systems represent and propagate information reliably — spanning robust, personalized federated learning for industrial diagnostics, and how large language models encode and homogenize cultural narratives.</p>
       </div>
-      <div class="avatar-placeholder">Photo</div>
+      <img class="avatar" src="profile.jpg" alt="Paarth Singh Rathore">
     </div>
     <div class="contact-line">paarthsinghrathore1@gmail.com &middot; +91 7397235288</div>
     <div class="link-row">
