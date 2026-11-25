@@ -9,12 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #FAF8F3;
-    --ink: #1C1C1E;
-    --ink-soft: #4A4A4A;
-    --line: #DEDAD0;
-    --accent: #1D3557;
-    --accent-soft: #8B6F3E;
+    --paper: #F7FAFD;
+    --ink: #16212E;
+    --ink-soft: #52687C;
+    --line: #D7E6F2;
+    --accent: #2C5EAD;
+    --accent-soft: #1591DC;
+    --accent-dark: #1C3F75;
+    --tint: #EAF4FC;
   }
 
   * { box-sizing: border-box; }
@@ -52,6 +54,13 @@
   header h1 {
     font-size: 2.5rem;
     letter-spacing: -0.01em;
+    display: inline-block;
+    cursor: default;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+  }
+  header h1:hover {
+    color: var(--accent-dark);
+    letter-spacing: 0;
   }
   .role {
     margin-top: 8px;
@@ -231,8 +240,8 @@
     padding: 2px 8px;
     border-radius: 3px;
     margin-right: 8px;
-    background: #EFEAE0;
-    color: var(--accent-soft);
+    background: var(--tint);
+    color: var(--accent);
   }
 
   /* Certifications & Skills */
